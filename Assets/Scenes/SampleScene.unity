@@ -481,24 +481,6 @@ Transform:
   m_Father: {fileID: 2075047590}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
---- !u!1 &1827707176 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2566154332354858961, guid: 671f16bbb8a514788a8970fc8ce75259,
-    type: 3}
-  m_PrefabInstance: {fileID: 2565242470523876851}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1827707177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1827707176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 524ccb08d42f3486d88f39ed426aa0d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1934499913
 GameObject:
   m_ObjectHideFlags: 0
@@ -700,10 +682,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Ship
       objectReference: {fileID: 0}
-    - target: {fileID: 2579884003926599779, guid: 671f16bbb8a514788a8970fc8ce75259,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 57125df2e9117bb40a32c83b6390c301, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 671f16bbb8a514788a8970fc8ce75259, type: 3}

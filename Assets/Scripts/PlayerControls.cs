@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-   [SerializeField] 
-    [Range(-1f,1f)]  float xOffset = 0.1f;
+    [SerializeField] float controlSpeed = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -19,9 +18,12 @@ public class PlayerControls : MonoBehaviour
         float xThrow = Input.GetAxis("Horizontal");
         float yThrow = Input.GetAxis("Vertical");
 
-        Vector3 oldPosition = transform.localPosition;
-        float newXPos = oldPosition.x + xOffset;
+        float xOffset = xThrow * Time.deltaTime * controlSpeed;
+        float yOffset = yThrow * Time.deltaTime * controlSpeed;
+        
+        float newXPos = transform.localPosition.x + xOffset;
+        float newYPos = transform.localPosition.y + yOffset;
 
-        transform.localPosition = new  Vector3 (newXPos , oldPosition.y, oldPosition.z);
+        transform.localPosition = new  Vector3 (newXPos , newYPos, transform.localPosition.z);
     }
 }

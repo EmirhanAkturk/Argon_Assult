@@ -142,22 +142,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4050782629326519878}
     m_Modifications:
-    - target: {fileID: 1827707177, guid: 671f16bbb8a514788a8970fc8ce75259, type: 3}
-      propertyPath: xRange
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1827707177, guid: 671f16bbb8a514788a8970fc8ce75259, type: 3}
-      propertyPath: yRange
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 1827707177, guid: 671f16bbb8a514788a8970fc8ce75259, type: 3}
-      propertyPath: controlRollFactor
-      value: -20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1827707177, guid: 671f16bbb8a514788a8970fc8ce75259, type: 3}
-      propertyPath: controlPitchFactor
-      value: -15
-      objectReference: {fileID: 0}
     - target: {fileID: 2564328066547717609, guid: 671f16bbb8a514788a8970fc8ce75259,
         type: 3}
       propertyPath: m_RootOrder

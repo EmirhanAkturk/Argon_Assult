@@ -17,12 +17,18 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float positionYawFactor = 2f;
     [SerializeField] float controlRollFactor = -20f;
 
+
+    [Header("Lasers")]
+    [SerializeField] ParticleSystem leftLaser;
+    [SerializeField] ParticleSystem rightLaser;
+
     float xThrow, yThrow;
 
     void Update()
     {
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
     }
 
     void ProcessRotation()
@@ -52,5 +58,13 @@ public class PlayerControls : MonoBehaviour
         float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    void ProcessFiring()
+    {
+        if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
+            Debug.Log("Shooting");
+        else if(Input.GetMouseButtonUp(0) || Input.GetKeyUp("space"))
+            Debug.Log("Shooting stopped");
     }
 }

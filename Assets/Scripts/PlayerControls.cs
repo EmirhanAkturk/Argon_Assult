@@ -6,8 +6,13 @@ using UnityEngine;
 public class PlayerControls : MonoBehaviour
 {
     [Header("Position Controls")]
+    [Tooltip("How fast ship moves up and down based upon player input")]
     [SerializeField] float controlSpeed = 10f;
+
+    [Tooltip("Horizontally movement range")]
     [SerializeField] float xRange = 10f;
+    
+    [Tooltip("Vertically movement range")]
     [SerializeField] float yRange = 6.25f;
 
     [Header("Rotation Controls")]
@@ -18,6 +23,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] float controlRollFactor = -20f;
 
     [Header("Lasers")]
+    [Tooltip("Add all player lasers here")]
     [SerializeField] GameObject[] lasers;
 
     float xThrow, yThrow;
@@ -62,7 +68,7 @@ public class PlayerControls : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) || Input.GetKeyDown("space"))
             SetLasersActive(true);
-        else //if (Input.GetMouseButtonUp(0) || Input.GetKeyUp("space"))
+        else if (Input.GetMouseButtonUp(0) || Input.GetKeyUp("space"))
             SetLasersActive(false);
     }
 

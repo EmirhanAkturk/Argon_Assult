@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] GameObject explosionEffect;
+    [SerializeField] Transform parent;
+
     private void OnParticleCollision(GameObject other)
     {
-        Debug.Log($"{name}: I'm hit by {other.gameObject.name}");
+        GameObject particle;
+        particle = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+        particle.transform.parent = parent;
         Destroy(gameObject, 0.1f);
     }
 }

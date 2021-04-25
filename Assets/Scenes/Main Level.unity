@@ -224,7 +224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395296404}
   m_Layer: 0
-  m_Name: Parent
+  m_Name: SpawnAtRuntime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -278,7 +278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 8005286626246378304, guid: a3133920980ad064996cf8330b3a02ea,
     type: 3}
-  parent: {fileID: 395296404}
+  parent: {fileID: 0}
+  amountToIncrease: 5
 --- !u!136 &468271619
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -480,7 +481,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 8005286626246378304, guid: a3133920980ad064996cf8330b3a02ea,
     type: 3}
-  parent: {fileID: 395296404}
+  parent: {fileID: 0}
+  amountToIncrease: 5
 --- !u!136 &713468055
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -685,6 +687,7 @@ MonoBehaviour:
   explosionEffect: {fileID: 8005286626246378304, guid: a3133920980ad064996cf8330b3a02ea,
     type: 3}
   parent: {fileID: 0}
+  amountToIncrease: 5
 --- !u!1 &756428764
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,6 +760,49 @@ PlayableDirector:
     value: {fileID: 727881233}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &853945709
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 853945711}
+  - component: {fileID: 853945710}
+  m_Layer: 0
+  m_Name: ScoreBoard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &853945710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853945709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1bc33b0e0de31b345adf18875a043620, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &853945711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853945709}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 776.38, y: 42.5, z: 534.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1044482658
 GameObject:
   m_ObjectHideFlags: 0
@@ -791,7 +837,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 8005286626246378304, guid: a3133920980ad064996cf8330b3a02ea,
     type: 3}
-  parent: {fileID: 395296404}
+  parent: {fileID: 0}
+  amountToIncrease: 5
 --- !u!136 &1044482660
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -901,7 +948,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 8005286626246378304, guid: a3133920980ad064996cf8330b3a02ea,
     type: 3}
-  parent: {fileID: 395296404}
+  parent: {fileID: 0}
+  amountToIncrease: 5
 --- !u!136 &1311831101
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1087,7 +1135,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 8005286626246378304, guid: a3133920980ad064996cf8330b3a02ea,
     type: 3}
-  parent: {fileID: 395296404}
+  parent: {fileID: 0}
+  amountToIncrease: 5
 --- !u!136 &1957810379
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -7,8 +7,14 @@ public class Enemy : MonoBehaviour
     [SerializeField] GameObject explosionEffect;
     [SerializeField] Transform parent;
     [SerializeField] int scorePerHit = 10;
+    [SerializeField] int amountOfDamage = 10;
 
     ScoreBoard scoreBoard;
+
+    public int GetAmountOfDamage()
+    {
+        return amountOfDamage;
+    }
 
     void Start()
     {

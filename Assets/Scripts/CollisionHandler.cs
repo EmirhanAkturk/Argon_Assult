@@ -1,24 +1,32 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] ParticleSystem explosionEffect;
-    //[SerializeField] PlayableDirector masterTimeline;
-    
+    [SerializeField] HealthBar healthBar;
+
     float loadDelay = 1f;
 
     void OnTriggerEnter(Collider other)
     {
-        //Debug.Log($"{this.name } **Trigged with** {other.gameObject.name}");
-        StartCrashSequence();
+        // Default amount of damage
+        int amountOfDamage = 10;
+
+        if (other.tag == "Enemy")
+        {
+            Enemy enemy = other.GetComponent<Enemy>();
+            amountOfDamage = enemy.GetAmountOfDamage();
+        }
+
+        healthBar.DecreaseHealth(amountOfDamage);
+        
+        if (healthBar.GetIsDeath())
+            StartCrashSequence();
     }
 
-    void StartCrashSequence()
+    public void StartCrashSequence()
     {
         DeactivePlayerComponents();
 

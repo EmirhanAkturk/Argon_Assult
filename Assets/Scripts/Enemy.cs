@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] int scorePerHit = 100;
     [SerializeField] int amountOfDamage = 20;
 
-    Transform parentTr;
+    GameObject parentObject;
     ScoreBoard scoreBoard;
 
     public int GetAmountOfDamage()
@@ -31,8 +31,7 @@ public class Enemy : MonoBehaviour
 
     void AssignParentObject()
     {
-        GameObject[] parent = GameObject.FindGameObjectsWithTag("Parent");
-        parentTr = parent[0].transform;
+        parentObject = GameObject.FindGameObjectWithTag("SpawnAtRuntime");
     }
 
     void AddRigidBody()
@@ -52,7 +51,7 @@ public class Enemy : MonoBehaviour
     private void ProcessHit()
     {
         GameObject particle = Instantiate(hitEffect, transform.position, Quaternion.identity);
-        particle.transform.parent = parentTr;
+        particle.transform.parent = parentObject.transform;
 
         scoreBoard.IncreaseScore(scorePerHit);
         health -= 10;
@@ -61,7 +60,7 @@ public class Enemy : MonoBehaviour
     private void KillEnemy()
     {
         GameObject particle = Instantiate(explosionEffect, transform.position, Quaternion.identity);
-        particle.transform.parent = parentTr;
+        particle.transform.parent = parentObject.transform;
         Destroy(gameObject, 0.1f);
     }
 }

@@ -2969,7 +2969,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1462103359}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Group of enemy ships 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2995,7 +2995,7 @@ Transform:
   - {fileID: 73874870}
   - {fileID: 1307515157}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: -18.4, z: 0}
 --- !u!1 &1514295849
 GameObject:
@@ -3491,7 +3491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1762352292}
   m_Layer: 0
-  m_Name: GameObject (1)
+  m_Name: Group of enemy ships 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3515,7 +3515,7 @@ Transform:
   - {fileID: 1148737260}
   - {fileID: 1153837944}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 12.612, y: -10.101001, z: 12.691001}
 --- !u!1 &1814499388
 GameObject:
@@ -3897,7 +3897,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2021075477}
   m_Layer: 0
-  m_Name: Enemies
+  m_Name: Group of enemy ships 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3931,7 +3931,7 @@ Transform:
   - {fileID: 2100327141}
   - {fileID: 1142206188}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2075047591 stripped
 Animator:
@@ -4118,11 +4118,6 @@ PrefabInstance:
     - target: {fileID: 1398774723413337967, guid: 3e5845228b6b0d24f8017a8e5ca65fa7,
         type: 3}
       propertyPath: m_Name
-      value: SpawnAtRuntime
-      objectReference: {fileID: 0}
-    - target: {fileID: 1398774723413337967, guid: 3e5845228b6b0d24f8017a8e5ca65fa7,
-        type: 3}
-      propertyPath: m_TagString
       value: SpawnAtRuntime
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -32,7 +32,7 @@ public class HealthBar : MonoBehaviour
     {
         playerHealth -= amountOfDecrease;
 
-        if (playerHealth < 0)
+        if (playerHealth <= 0)
         {
             playerHealth = 0;
             isDeath = true;
@@ -43,6 +43,6 @@ public class HealthBar : MonoBehaviour
 
     private void UpdateHealthText()
     {
-        healthText.text = $"Score: {playerHealth}";
+        healthText.text = $"Health: {playerHealth}";
     }
 }

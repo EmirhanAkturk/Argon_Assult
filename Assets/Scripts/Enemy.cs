@@ -44,21 +44,30 @@ public class Enemy : MonoBehaviour
     {
         ProcessHit();
 
+        //if the enemy's health is lower than 0, call the kill process
         if (health <= 0)
             KillEnemy();
     }
 
     private void ProcessHit()
     {
+        //if the enemy is hit, increase score.
+        scoreBoard.IncreaseScore(scorePerHit);
+
+        //Create hit particle
         GameObject particle = Instantiate(hitEffect, transform.position, Quaternion.identity);
         particle.transform.parent = parentObject.transform;
 
-        scoreBoard.IncreaseScore(scorePerHit);
+        //Decrease the enemy's health
         health -= 10;
     }
 
     private void KillEnemy()
     {
+        //if the enemy is killed, add extra point.
+        scoreBoard.IncreaseScore(scorePerHit*3);
+
+        //Create enemy death particle
         GameObject particle = Instantiate(explosionEffect, transform.position, Quaternion.identity);
         particle.transform.parent = parentObject.transform;
         Destroy(gameObject, 0.1f);

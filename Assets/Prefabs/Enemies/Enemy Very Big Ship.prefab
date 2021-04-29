@@ -93,11 +93,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 207b487efe836b44aa2bdd07fd725e96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionEffect: {fileID: 8005286626246378304, guid: a3133920980ad064996cf8330b3a02ea,
+  explosionEffect: {fileID: 8005286626246378304, guid: 8754c7a1d67515948a32e1c11eb5fb6e,
     type: 3}
-  hitEffect: {fileID: 8005286626246378304, guid: 6eff620c8e4b0ba4ca421a5a084785f4,
+  hitEffect: {fileID: 8005286626246378304, guid: a3133920980ad064996cf8330b3a02ea,
     type: 3}
-  health: 30
+  health: 200
   scorePerHit: 250
   amountOfDamage: 75
 --- !u!1 &2451155363209712839

@@ -268,7 +268,7 @@ GameObject:
   - component: {fileID: 3336921819720613900}
   - component: {fileID: 3323026289454022652}
   m_Layer: 0
-  m_Name: EnemyShip4
+  m_Name: Enemy Big Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -352,6 +352,6 @@ MonoBehaviour:
     type: 3}
   hitEffect: {fileID: 8005286626246378304, guid: 6eff620c8e4b0ba4ca421a5a084785f4,
     type: 3}
-  health: 30
+  health: 10
   scorePerHit: 100
   amountOfDamage: 25

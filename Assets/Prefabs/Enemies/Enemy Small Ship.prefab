@@ -264,7 +264,7 @@ MonoBehaviour:
     type: 3}
   hitEffect: {fileID: 8005286626246378304, guid: 6eff620c8e4b0ba4ca421a5a084785f4,
     type: 3}
-  health: 30
+  health: 10
   scorePerHit: 100
   amountOfDamage: 25
 --- !u!1 &8923803326034062080

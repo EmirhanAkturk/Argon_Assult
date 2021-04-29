@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2473488306326763685}
   - component: {fileID: 2450484045506394478}
   m_Layer: 0
-  m_Name: EnemyShip5
+  m_Name: Enemy Very Big Ship
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2451145554848196825}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.5443764, y: 1.3, z: -20.41741}
-  m_LocalScale: {x: 3, y: 5, z: 3}
+  m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 2454428485700369037}
   m_Father: {fileID: 0}
@@ -318,8 +318,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 0.3, z: 3}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10, y: 2.059934, z: 3}
+  m_Center: {x: 0, y: -0.09668026, z: 0}
 --- !u!1 &2452121881668669677
 GameObject:
   m_ObjectHideFlags: 0

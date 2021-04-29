@@ -25,7 +25,7 @@ MonoBehaviour:
     m_Start: 26.366666666666667
     m_ClipIn: 0
     m_Asset: {fileID: 5871426626572422085}
-    m_Duration: 20.133333333333
+    m_Duration: 14.766666666666666
     m_TimeScale: 1
     m_ParentTrack: {fileID: -8074941959093427406}
     m_EaseInDuration: 0
@@ -371,6 +371,7 @@ MonoBehaviour:
   - {fileID: -1330414101551546965}
   - {fileID: 290754632116193279}
   - {fileID: 4968475552064089759}
+  - {fileID: 27564595458425903}
   m_Clips: []
   m_Markers:
     m_Objects: []
@@ -489,6 +490,98 @@ MonoBehaviour:
   searchHierarchy: 0
   active: 1
   postPlayback: 2
+--- !u!114 &-3846481136231433946
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15e0374501f39d54eb30235764636e0e, type: 3}
+  m_Name: Group of enemy ships 5
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: 27564595458425903}
+  m_Children: []
+  m_Clips:
+  - m_Version: 1
+    m_Start: 35.61666666666667
+    m_ClipIn: 0
+    m_Asset: {fileID: 714060615621697131}
+    m_Duration: 11.65
+    m_TimeScale: 1
+    m_ParentTrack: {fileID: -3846481136231433946}
+    m_EaseInDuration: 0
+    m_EaseOutDuration: 0
+    m_BlendInDuration: 0
+    m_BlendOutDuration: 0
+    m_MixInCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_MixOutCurve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - serializedVersion: 3
+        time: 1
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    m_BlendInCurveMode: 0
+    m_BlendOutCurveMode: 0
+    m_ExposedParameterNames: []
+    m_AnimationCurves: {fileID: 0}
+    m_Recordable: 0
+    m_PostExtrapolationMode: 0
+    m_PreExtrapolationMode: 0
+    m_PostExtrapolationTime: 0
+    m_PreExtrapolationTime: 0
+    m_DisplayName: Group of enemy ships 5
+  m_Markers:
+    m_Objects: []
 --- !u!114 &-2625493464902756917
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2800,11 +2893,35 @@ MonoBehaviour:
   m_Tracks:
   - {fileID: -2625493464902756917}
   - {fileID: -6707910912843073568}
-  m_FixedDuration: 0
+  m_FixedDuration: 52.616666666666
   m_EditorSettings:
     m_Framerate: 60
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 4774556968233447736}
+--- !u!114 &27564595458425903
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0fc6f5187a81dc47999eefade6f0935, type: 3}
+  m_Name: Wave 5
+  m_EditorClassIdentifier: 
+  m_Version: 3
+  m_AnimClip: {fileID: 0}
+  m_Locked: 0
+  m_Muted: 0
+  m_CustomPlayableFullTypename: 
+  m_Curves: {fileID: 0}
+  m_Parent: {fileID: -6707910912843073568}
+  m_Children:
+  - {fileID: -3846481136231433946}
+  m_Clips: []
+  m_Markers:
+    m_Objects: []
 --- !u!114 &290754632116193279
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2829,6 +2946,29 @@ MonoBehaviour:
   m_Clips: []
   m_Markers:
     m_Objects: []
+--- !u!114 &714060615621697131
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48853ae485fa386428341ac1ea122570, type: 3}
+  m_Name: ControlPlayableAsset
+  m_EditorClassIdentifier: 
+  sourceGameObject:
+    exposedName: 0ea0cbf9f15e768448683db777f39c30
+    defaultValue: {fileID: 0}
+  prefabGameObject: {fileID: 0}
+  updateParticle: 1
+  particleRandomSeed: 7046
+  updateDirector: 1
+  updateITimeControl: 1
+  searchHierarchy: 0
+  active: 1
+  postPlayback: 2
 --- !u!114 &909911569230215216
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3298,7 +3438,7 @@ MonoBehaviour:
     m_Start: 12.166666666666668
     m_ClipIn: 0
     m_Asset: {fileID: 2112183944683529626}
-    m_Duration: 19.916666666666668
+    m_Duration: 11.650000000000002
     m_TimeScale: 1
     m_ParentTrack: {fileID: 8589592654829354879}
     m_EaseInDuration: 0

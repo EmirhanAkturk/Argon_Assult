@@ -7,8 +7,7 @@ using UnityEngine;
 public class ScoreBoard : MonoBehaviour
 {
     TMP_Text scoreText;
-    int score;
-
+    
     private void Start()
     {
         scoreText = GetComponent<TMP_Text>();    
@@ -16,14 +15,22 @@ public class ScoreBoard : MonoBehaviour
 
     public void IncreaseScore(int amountToIncrease)
     {
-        score += amountToIncrease;
+        Global.Score += amountToIncrease;
         UpdateScoreText();
     }
 
     private void UpdateScoreText()
     {
+        string newScore = ScoreToString(Global.Score);
+
+        //Update score text
+        scoreText.text = $"Score: {newScore}";
+    }
+
+    private string ScoreToString(int score)
+    {
         //find the number of digits of the score 
-        int numberOfDigits = (int)Math.Floor(Math.Log10(score) + 1);
+        int numberOfDigits = (int)Math.Floor(Math.Log10(Global.Score) + 1);
 
         //Print it in 5 digits for visuality.
         string text = "";
@@ -35,7 +42,6 @@ public class ScoreBoard : MonoBehaviour
         //add score text after zeros
         text += score.ToString();
 
-        //Update score text
-        scoreText.text = $"Score: {text}";
+        return text;
     }
 }

@@ -6,8 +6,20 @@ public class CollisionHandler : MonoBehaviour
 {
     [SerializeField] GameObject explosionFX;
     [SerializeField] HealthBar healthBar;
+    
+    [Header("Win-Lose Panels")]
+    [SerializeField] GameObject winPanel;
+    [SerializeField] GameObject losePanel;
 
-    float loadDelay = 1f;
+
+    WaitForSeconds winDelayTime;
+    WaitForSeconds loseDelayTime;
+
+    private void Start()
+    {
+        winDelayTime = new WaitForSeconds(5f);
+        loseDelayTime = new WaitForSeconds(1f);
+    }
 
     void OnTriggerEnter(Collider other)
     {
@@ -20,8 +32,15 @@ public class CollisionHandler : MonoBehaviour
             amountOfDamage = enemy.GetAmountOfDamage();
         }
 
+        if(other.tag == "WinCheck")
+        {
+            Debug.Log("WinCheck");
+            GetComponent<PlayerControls>().enabled = false;
+            StartCoroutine(OpenPanel(winDelayTime, true));
+        }
+
         healthBar.DecreaseHealth(amountOfDamage);
-        
+
         if (healthBar.GetIsDeath())
             StartCrashSequence();
     }
@@ -36,7 +55,7 @@ public class CollisionHandler : MonoBehaviour
         explosionFX.GetComponent<ParticleSystem>().Play();
 
         //Invoke("ReloadLevel", 1f); //alternative 
-        StartCoroutine(ReloadLevel());
+        StartCoroutine(OpenPanel(loseDelayTime, false));
     }
 
     private void DeactivePlayerComponents()
@@ -46,11 +65,17 @@ public class CollisionHandler : MonoBehaviour
         GetComponent<BoxCollider>().enabled = false;
     }
 
-    IEnumerator ReloadLevel()
+    private IEnumerator OpenPanel(WaitForSeconds delayTime, bool isWin)
     {
-        yield return new WaitForSeconds(loadDelay);
+        yield return delayTime;
 
-        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        SceneManager.LoadScene(currentSceneIndex);
+        if (isWin) { 
+            winPanel.SetActive(true);
+            losePanel.SetActive(false);
+        }
+        else{ 
+            losePanel.SetActive(true);
+            winPanel.SetActive(false);
+        }
     }
 }

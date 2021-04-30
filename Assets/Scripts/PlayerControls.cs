@@ -81,4 +81,8 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
+    void ResetOffset()
+    {
+
+    }
 }

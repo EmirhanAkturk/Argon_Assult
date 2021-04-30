@@ -4389,7 +4389,7 @@ TerrainCollider:
   m_Material: {fileID: 0}
   m_Enabled: 1
   m_TerrainData: {fileID: 15600000, guid: de97bf15331c348259a58dc3214d18f3, type: 2}
-  m_EnableTreeColliders: 0
+  m_EnableTreeColliders: 1
 --- !u!218 &1934499915
 Terrain:
   m_ObjectHideFlags: 0
@@ -4706,6 +4706,11 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1514295853}
+    - target: {fileID: 1149473134332078988, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: TrailModule.lifetime.scalar
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1994768326159251225, guid: 779029d1efa6fe34f813fd2b92b62e72,
         type: 3}
       propertyPath: healthBar
@@ -4771,6 +4776,36 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7118775919486507429, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118775919486507429, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: m_MaxParticleSize
+      value: 10.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 7118775919486507429, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: m_MinParticleSize
+      value: 8.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582607670977012716, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.569
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582607670977012716, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582607670977012716, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7582607670977012716, guid: 779029d1efa6fe34f813fd2b92b62e72,
         type: 3}
       propertyPath: m_LocalRotation.w
@@ -4795,6 +4830,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582607671641267290, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582607671641267290, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7582607671641267290, guid: 779029d1efa6fe34f813fd2b92b62e72,
         type: 3}

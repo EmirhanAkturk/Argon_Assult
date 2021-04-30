@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-    [SerializeField] ParticleSystem explosionEffect;
+    [SerializeField] GameObject explosionFX;
     [SerializeField] HealthBar healthBar;
 
     float loadDelay = 1f;
@@ -32,7 +32,8 @@ public class CollisionHandler : MonoBehaviour
 
         //masterTimeline.Pause(); //pause timeline
 
-        explosionEffect.Play();
+        explosionFX.GetComponent<AudioSource>().Play();
+        explosionFX.GetComponent<ParticleSystem>().Play();
 
         //Invoke("ReloadLevel", 1f); //alternative 
         StartCoroutine(ReloadLevel());

@@ -5,8 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [Header("Particles")]
-    [SerializeField] GameObject explosionEffect;
-    [SerializeField] GameObject hitEffect;
+    [SerializeField] GameObject explosionFX;
+    [SerializeField] GameObject hitFX;
 
     [Header("Hit Parameters")]
     [SerializeField] int health = 30;
@@ -55,7 +55,7 @@ public class Enemy : MonoBehaviour
         scoreBoard.IncreaseScore(scorePerHit);
 
         //Create hit particle
-        GameObject particle = Instantiate(hitEffect, transform.position, Quaternion.identity);
+        GameObject particle = Instantiate(hitFX, transform.position, Quaternion.identity);
         particle.transform.parent = parentObject.transform;
 
         //Decrease the enemy's health
@@ -68,8 +68,8 @@ public class Enemy : MonoBehaviour
         scoreBoard.IncreaseScore(scorePerHit*3);
 
         //Create enemy death particle
-        GameObject particle = Instantiate(explosionEffect, transform.position, Quaternion.identity);
-        particle.transform.parent = parentObject.transform;
+        GameObject explosionChild = Instantiate(explosionFX, transform.position, Quaternion.identity);
+        explosionChild.transform.parent = parentObject.transform;
         Destroy(gameObject, 0.1f);
     }
 }

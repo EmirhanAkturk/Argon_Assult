@@ -3433,6 +3433,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1345050686 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6282302210238532591, guid: 779029d1efa6fe34f813fd2b92b62e72,
+    type: 3}
+  m_PrefabInstance: {fileID: 4050782628079126752}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1462103358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7003402261276253122, guid: bef7e13cd65362f42bd049115b1baa18,
@@ -4496,6 +4502,15 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1514295853}
+    - target: {fileID: 1128581642, guid: 779029d1efa6fe34f813fd2b92b62e72, type: 3}
+      propertyPath: explosionFX
+      value: 
+      objectReference: {fileID: 1345050686}
+    - target: {fileID: 1128581642, guid: 779029d1efa6fe34f813fd2b92b62e72, type: 3}
+      propertyPath: explosionSFX
+      value: 
+      objectReference: {fileID: 7897325567036606249, guid: 16cd5a3512551c943af9a85a96b77834,
+        type: 3}
     - target: {fileID: 4050782629326519877, guid: 779029d1efa6fe34f813fd2b92b62e72,
         type: 3}
       propertyPath: m_Name
@@ -4554,6 +4569,11 @@ PrefabInstance:
     - target: {fileID: 4050782629326519878, guid: 779029d1efa6fe34f813fd2b92b62e72,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174341166857801606, guid: 779029d1efa6fe34f813fd2b92b62e72,
+        type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7582607670977012716, guid: 779029d1efa6fe34f813fd2b92b62e72,

@@ -26,13 +26,32 @@ public class PlayerControls : MonoBehaviour
     [Tooltip("Add all player lasers here")]
     [SerializeField] GameObject[] lasers;
 
+
+    Vector3 lastInputPosition;
+    Vector3 lastInputRotation;
+
+    float startTime;
+    float timeCount;
+    float journeyTime = 1f;
+
     float xThrow, yThrow;
+    bool isControlActive = true;
+
+    public bool IsControlActive { get => isControlActive; set => isControlActive = value; }
 
     void Update()
     {
-        ProcessTranslation();
-        ProcessRotation();
-        ProcessFiring();
+        if (isControlActive)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+            ProcessFiring();
+        }
+        else 
+        {
+            ResetTranslation();
+            ResetRotation();
+        }
     }
 
     void ProcessRotation()
@@ -58,8 +77,11 @@ public class PlayerControls : MonoBehaviour
         float rawXPos = transform.localPosition.x + xOffset;
         float rawYPos = transform.localPosition.y + yOffset;
 
-        float clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
-        float clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
+        float clampedXPos;
+        float clampedYPos;
+
+        clampedXPos = Mathf.Clamp(rawXPos, -xRange, xRange);
+        clampedYPos = Mathf.Clamp(rawYPos, -yRange, yRange);
 
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
     }
@@ -81,8 +103,29 @@ public class PlayerControls : MonoBehaviour
         }
     }
 
-    void ResetOffset()
+    private void ResetRotation()
     {
+        float fracComplete = (Time.time - startTime) / journeyTime;
+        //Debug.Log(transform.localEulerAngles);
 
+        transform.localEulerAngles = Vector3.Slerp(Vector3.zero, Vector3.zero, fracComplete);
+
+        //transform.rotation = Quaternion.Slerp(Quaternion.Euler(lastInputRotation), Quaternion.Euler(Vector3.zero), fracComplete);
+        //timeCount += Time.deltaTime;
+       
+    }
+
+    private void ResetTranslation()
+    {
+        float fracComplete = (Time.time - startTime) / journeyTime;
+        transform.localPosition = Vector3.Slerp(lastInputPosition, Vector3.zero, fracComplete);
+    }
+
+    public void SetLastInputInformation()
+    {
+        startTime = Time.time; //last input time
+
+        lastInputPosition = transform.localPosition; //last input time position
+        lastInputRotation = transform.localRotation.eulerAngles;//last input time rotation
     }
 }

@@ -17,7 +17,7 @@ public class CollisionHandler : MonoBehaviour
 
     private void Start()
     {
-        winDelayTime = new WaitForSeconds(5f);
+        winDelayTime = new WaitForSeconds(4f);
         loseDelayTime = new WaitForSeconds(1f);
     }
 
@@ -35,7 +35,10 @@ public class CollisionHandler : MonoBehaviour
         if(other.tag == "WinCheck")
         {
             Debug.Log("WinCheck");
-            GetComponent<PlayerControls>().enabled = false;
+            PlayerControls playerControl = GetComponent<PlayerControls>();
+            playerControl.IsControlActive = false;
+            playerControl.SetLastInputInformation();
+
             StartCoroutine(OpenPanel(winDelayTime, true));
         }
 

@@ -41,14 +41,22 @@ public class WinPanel : MonoBehaviour
         //Assing lose panel highest score text
         int highestScore = PlayerPrefs.GetInt("highestScore");
 
+        string newScore;
+
         if (Global.Score > highestScore)
         {
             PlayerPrefs.SetInt("highestScore", Global.Score);
+
+            highestScore = Global.Score;
+
+            newScore = ScoreToString(highestScore);
+            highestScoreText.text = $"New Highest Score: {newScore}";
         }
-
-        string newScore = ScoreToString(highestScore);
-
-        highestScoreText.text = $"Highest Score: {newScore}";
+        else
+        {
+            newScore = ScoreToString(highestScore);
+            highestScoreText.text = $"Highest Score: {newScore}";
+        }
     }
 
     private string ScoreToString(int score)

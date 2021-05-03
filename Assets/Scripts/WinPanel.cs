@@ -22,6 +22,8 @@ public class WinPanel : MonoBehaviour
         healthText.enabled = false;
 
         AssignTexts();
+
+        Global.Score = 0;
     }
 
     void Update()
